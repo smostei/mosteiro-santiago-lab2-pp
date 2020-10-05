@@ -155,7 +155,7 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridCompras.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridCompras.GridColor = System.Drawing.SystemColors.Menu;
+            this.dataGridCompras.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.dataGridCompras.Location = new System.Drawing.Point(48, 207);
             this.dataGridCompras.Name = "dataGridCompras";
             this.dataGridCompras.ReadOnly = true;

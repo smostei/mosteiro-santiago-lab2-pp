@@ -28,6 +28,7 @@ namespace KiwikEMart
             //Ni bien se inicia la app, se settea este gridView con las compras totales
             dataGridCompras.DataSource = RepositorioKiwikEMart.ListaCompras;
             dataGridCompras.BorderStyle = BorderStyle.Fixed3D;
+            alternarColorFilasDataGrid(dataGridCompras);
         }
 
         private void clienteToolStripMenuItem_Click(object sender, EventArgs e)
@@ -86,6 +87,12 @@ namespace KiwikEMart
             dataGridCompras.DataSource = null;
             dataGridCompras.DataSource =
                 RepositorioKiwikEMart.ListaCompras;
+        }
+
+        private void alternarColorFilasDataGrid(DataGridView dataGrid)
+        {
+            dataGrid.RowsDefaultCellStyle.BackColor = Color.LightBlue;
+            dataGrid.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
         }
 
         private void stockTotalDeProductosToolStripMenuItem_Click(object sender, EventArgs e)

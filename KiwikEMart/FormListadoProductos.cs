@@ -21,6 +21,7 @@ namespace KiwikEMart
         {
             tituloProductos.Text = FormTitle;
             IniciarDataSource();
+            alternarColorFilasDataGrid(dataGridProductos);
         }
 
         protected virtual string FormTitle
@@ -34,5 +35,10 @@ namespace KiwikEMart
             dataGridProductos.DataSource = RepositorioKiwikEMart.ListaProductos;
         }
 
+        private void alternarColorFilasDataGrid(DataGridView dataGrid)
+        {
+            dataGrid.RowsDefaultCellStyle.BackColor = Color.LightBlue;
+            dataGrid.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
+        }
     }
 }

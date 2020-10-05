@@ -48,6 +48,9 @@ namespace KiwikEMart
             {
                 vendedorCmbBox.Items.Add(e.NombreYApellido);
             }
+
+            alternarColorFilasDataGrid(dataGridProductos);
+            alternarColorFilasDataGrid(dataGridCarrito);
         }
 
         private void carritoButton_Click(object sender, EventArgs e)
@@ -101,6 +104,12 @@ namespace KiwikEMart
             }
 
             return listaCarrito;
+        }
+
+        private void alternarColorFilasDataGrid(DataGridView dataGrid)
+        {
+            dataGrid.RowsDefaultCellStyle.BackColor = Color.LightBlue;
+            dataGrid.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
         }
 
         private void refrescarDataGridProductos()

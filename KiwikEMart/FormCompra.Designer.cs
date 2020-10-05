@@ -102,6 +102,7 @@
             this.dataGridProductos.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridProductos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridProductos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.dataGridProductos.Location = new System.Drawing.Point(12, 142);
             this.dataGridProductos.MultiSelect = false;
             this.dataGridProductos.Name = "dataGridProductos";
@@ -120,6 +121,7 @@
             this.dataGridCarrito.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridCarrito.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridCarrito.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridCarrito.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.dataGridCarrito.Location = new System.Drawing.Point(411, 142);
             this.dataGridCarrito.Name = "dataGridCarrito";
             this.dataGridCarrito.Size = new System.Drawing.Size(377, 257);

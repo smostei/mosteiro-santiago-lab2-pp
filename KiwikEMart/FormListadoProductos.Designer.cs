@@ -62,6 +62,7 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridProductos.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridProductos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.dataGridProductos.Location = new System.Drawing.Point(27, 81);
             this.dataGridProductos.Name = "dataGridProductos";
             this.dataGridProductos.Size = new System.Drawing.Size(744, 346);
