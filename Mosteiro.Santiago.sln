@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.30503.244
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KiwikEMart", "KiwikEMart\KiwikEMart.csproj", "{2D9DEF8D-B8D7-4E26-9996-348E1B2ED33B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidades", "Entidades\Entidades.csproj", "{798B50FD-1B14-48FA-95B6-A639F735C284}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{D2404242-073C-44BE-919F-B2F2AAE35F2D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{2D9DEF8D-B8D7-4E26-9996-348E1B2ED33B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D9DEF8D-B8D7-4E26-9996-348E1B2ED33B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D9DEF8D-B8D7-4E26-9996-348E1B2ED33B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{798B50FD-1B14-48FA-95B6-A639F735C284}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{798B50FD-1B14-48FA-95B6-A639F735C284}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{798B50FD-1B14-48FA-95B6-A639F735C284}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{798B50FD-1B14-48FA-95B6-A639F735C284}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2404242-073C-44BE-919F-B2F2AAE35F2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2404242-073C-44BE-919F-B2F2AAE35F2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2404242-073C-44BE-919F-B2F2AAE35F2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2404242-073C-44BE-919F-B2F2AAE35F2D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

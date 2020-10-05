@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "ASIhl7uXPYJCL5dQ73TOaJBN3IFWNI9si/2yZMRYdvSYRXpwDioL0wsCHOgeNKT9dnubvXQM5soNwMDpfZtT2w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\augus\\Desktop\\mosteiro-santiago-lab-2-pp\\KiwikEMart\\Data\\Data.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\augus\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\augus\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
