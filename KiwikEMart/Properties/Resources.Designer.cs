@@ -69,5 +69,14 @@ namespace KiwikEMart.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.IO.UnmanagedMemoryStream similar a System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream gracias_por_venir {
+            get {
+                return ResourceManager.GetStream("gracias_por_venir", resourceCulture);
+            }
+        }
     }
 }

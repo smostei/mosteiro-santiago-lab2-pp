@@ -135,5 +135,8 @@
   <ItemGroup>
     <None Include="Resources\apu_logo.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gracias-por-venir.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

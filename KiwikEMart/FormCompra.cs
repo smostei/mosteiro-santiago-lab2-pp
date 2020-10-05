@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,11 +19,14 @@ namespace KiwikEMart
         private List<ProductoItem> listaItemsCarrito;
         private List<Producto> listaProductosAux;
 
+        private SoundPlayer reproductor;
+
         public FormCompra()
         {
             InitializeComponent();
             listaItemsCarrito = new List<ProductoItem>();
-            listaProductosAux = new List<Producto>(); 
+            listaProductosAux = new List<Producto>();
+            reproductor = new SoundPlayer(Properties.Resources.gracias_por_venir);
         }
 
         private void FormCompra_Load(object sender, EventArgs e)
@@ -44,7 +48,6 @@ namespace KiwikEMart
             {
                 vendedorCmbBox.Items.Add(e.NombreYApellido);
             }
-
         }
 
         private void carritoButton_Click(object sender, EventArgs e)
@@ -135,6 +138,7 @@ namespace KiwikEMart
                 //Piso la lista de productos de verdad con la que se usó para comprar
                 RepositorioKiwikEMart.ListaProductos = listaProductosAux;
 
+                reproductor.Play();
                 this.DialogResult = DialogResult.OK;
             } else
             {
