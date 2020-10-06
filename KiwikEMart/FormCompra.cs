@@ -34,6 +34,7 @@ namespace KiwikEMart
             iniciarData();
         }
 
+
         private void iniciarData()
         {
             cargarListaClonadaProductos();
@@ -55,11 +56,11 @@ namespace KiwikEMart
 
         private void carritoButton_Click(object sender, EventArgs e)
         {
-            Producto productoAux = (Producto) dataGridProductos.SelectedRows[0].DataBoundItem;
+            Producto productoAux = (Producto) dataGridProductos.SelectedRows[0].DataBoundItem; //Agarro el primer item, ya que solo se puede seleccionar 1 a la vez
 
             if(productoAux.StockDisponible > 0)
             {
-                productoAux.StockDisponible--;
+                productoAux.StockDisponible--; 
                 agregarProductoAlCarrito(productoAux);
 
                 refrescarDataGridProductos();
@@ -85,6 +86,9 @@ namespace KiwikEMart
             && vendedorCmbBox.SelectedIndex != -1
             && dataGridCarrito.Rows.Count != 0;
 
+        /// <summary>
+        /// Este metodo va a crear una lista "auxiliar" ya que se debe trabajar con los productos por valor y no por referencia
+        /// </summary>
         private void cargarListaClonadaProductos()
         {
             foreach(Producto p in RepositorioKiwikEMart.ListaProductos)

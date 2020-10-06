@@ -8,12 +8,13 @@ namespace Data
     public static class RepositorioKiwikEMart
     {
         private static List<Producto> listaProductos;
-        private static List<Empleado> listaEmpleados; //A primera instancia, solo estarán Apu y su hermano
+        private static List<Empleado> listaEmpleados; 
         private static List<Compra> listaCompras;
         private static List<Cliente> listaClientes;
 
         static RepositorioKiwikEMart()
         {
+            //Inicio toda la fuente de datos
             listaProductos = new List<Producto>();
             listaEmpleados = new List<Empleado>();
             listaCompras = new List<Compra>();
@@ -22,7 +23,7 @@ namespace Data
 
         public static List<Producto> ListaProductos
         {
-            get
+            get //Cuando haga un get de la lista de productos, solo me traerá los que tienen stock
             {
                 List<Producto> listaProductosConStock = new List<Producto>();
 
@@ -92,12 +93,14 @@ namespace Data
 
         public static void iniciarEmpleados()
         {
+            //Unicos dos empleados de la tienda
             listaEmpleados.Add(new Empleado("Apu", "Nahasapeemapetilon", 24500346, "apu", "1234"));
             listaEmpleados.Add(new Empleado("Sanjay", "Nahasapeemapetilon", 17490312, "sanjay", "4321"));
         }
 
         public static void iniciarClientes()
         {
+            //A primera instancia, solo tendremos estos 3 clientes
             listaClientes.Add(new Cliente("Homero", "Simpson", 25170875));
             listaClientes.Add(new Cliente("Milhouse", "Van Houten", 50230213));
             listaClientes.Add(new Cliente("Ned", "Flanders", 16658126));
@@ -111,6 +114,7 @@ namespace Data
             productosComprados.Add(new ProductoItem("Vino Toro", Categoria.Bebida, 25.0));
 
 
+            //Hardcodeando algunas compras para iniciar la aplicación
             listaCompras.Add(new Compra(listaClientes[0], listaEmpleados[0], productosComprados));
             listaCompras.Add(new Compra(listaClientes[2], listaEmpleados[0], productosComprados));
             listaCompras.Add(new Compra(listaClientes[0], listaEmpleados[1], productosComprados));
@@ -123,10 +127,22 @@ namespace Data
             listaCompras.Add(new Compra(listaClientes[0], listaEmpleados[1], productosComprados));
         }
 
+        /// <summary>
+        /// Agregar un producto a la lista
+        /// </summary>
+        /// <param name="producto"></param>
         public static void agregarProducto(Producto producto) => listaProductos.Add(producto);
 
+        /// <summary>
+        /// Agregar un cliente a la lista
+        /// </summary>
+        /// <param name="cliente"></param>
         public static void agregarCliente(Cliente cliente) => listaClientes.Add(cliente);
 
+        /// <summary>
+        /// Devuelve una lista de productos con aquellos productos que tengan un stock menor a 10
+        /// </summary>
+        /// <returns></returns>
         public static List<Producto> GetProductosConStockMenorDiez()
         {
             List<Producto> listaFiltrada = new List<Producto>();
@@ -142,6 +158,10 @@ namespace Data
             return listaFiltrada;
         }
 
+        /// <summary>
+        /// Devuelve el stock total de todos los productos
+        /// </summary>
+        /// <returns></returns>
         public static int getTotalStockProductos()
         {
             int stockTotal = 0;
@@ -154,6 +174,11 @@ namespace Data
             return stockTotal;
         }
 
+        /// <summary>
+        /// Retorna una lista con todas las compras segun un empleado
+        /// </summary>
+        /// <param name="nombreEmpleado"></param>
+        /// <returns></returns>
         public static List<Compra> getComprasPorEmpleado(string nombreEmpleado)
         {
             List<Compra> listaFiltrada = new List<Compra>();
@@ -169,6 +194,11 @@ namespace Data
             return listaFiltrada;
         }
 
+        /// <summary>
+        /// Devuelve un objeto de tipo Empleado segun su nombre y apellido
+        /// </summary>
+        /// <param name="nombreYApellido"></param>
+        /// <returns></returns>
         public static Empleado getEmpleadoPorNombreYApellido(string nombreYApellido)
         {
             Empleado emp = null;
@@ -185,6 +215,11 @@ namespace Data
             return emp;
         }
 
+        /// <summary>
+        /// Devuelve un objeto de tipo Cliente segun su nombre y apellido
+        /// </summary>
+        /// <param name="nombreYApellido"></param>
+        /// <returns></returns>
         public static Cliente getClientePorNombreYApellido(string nombreYApellido)
         {
             Cliente cliente = null;

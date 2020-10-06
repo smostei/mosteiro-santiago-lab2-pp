@@ -6,14 +6,17 @@ namespace Entidades
 {
     public sealed class Compra
     {
-        private static int id;
+        private static int ID_AUX;
+
+        private int id;
         private Cliente cliente;
         private Empleado vendedor;
         private List<ProductoItem> listaProductosComprados;
 
         public Compra(Cliente cliente, Empleado vendedor, List<ProductoItem> listaProductosComprados)
         {
-            id++;
+            ID_AUX++;
+            this.id = ID_AUX;
             this.cliente = cliente;
             this.vendedor = vendedor;
             this.listaProductosComprados = listaProductosComprados;
@@ -21,7 +24,7 @@ namespace Entidades
 
         static Compra()
         {
-            id = 0;
+            ID_AUX = 0;
         }
 
         public String NombreVendedor
@@ -36,7 +39,7 @@ namespace Entidades
 
         public String ListaProductosComprados
         {
-            get
+            get //De esta manera, se mostraran los productos comprados en el data grid view
             {
                 StringBuilder sb = new StringBuilder();
 
@@ -48,9 +51,13 @@ namespace Entidades
                 return sb.ToString();
             }
         }
+
+        /// <summary>
+        /// El monto final puede ir con un descuento del 13% si el cliente es de la familia Simpson
+        /// </summary>
         public string MontoFinal
         {
-            get
+            get 
             {
                 double montoFinal = GetMontoProductos();
 
@@ -64,6 +71,10 @@ namespace Entidades
             }
         }
 
+        /// <summary>
+        /// Retorna el monto total de la lista de productos que van a estar en el carrito
+        /// </summary>
+        /// <returns></returns>
         public double GetMontoProductos()
         {
             double montoTotal = 0;
